@@ -62,32 +62,5 @@
   <footer>
     <p>&copy; 2024 My Recipe Book</p>
   </footer>
-
-  <script>
-    // Handle form submission
-    document.getElementById("recipeForm").addEventListener("submit", function(event) {
-      event.preventDefault(); // Prevent form submission
-
-      // Get the entered values
-      var title = document.getElementById("recipeTitle").value;
-      var ingredients = document.getElementById("recipeIngredients").value;
-      var instructions = document.getElementById("recipeInstructions").value;
-
-      // Create a new recipe element
-      var recipeElement = document.createElement("div");
-      recipeElement.innerHTML = "<h3>" + title + "</h3>"
-        + "<p><strong>Ingredients:</strong><br>" + ingredients + "</p>"
-        + "<p><strong>Instructions:</strong><br>" + instructions + "</p>";
-
-      // Append the new recipe to the main section
-      var mainSection = document.querySelector("main");
-      mainSection.appendChild(recipeElement);
-
-      // Clear the form fields
-      document.getElementById("recipeTitle").value = "";
-      document.getElementById("recipeIngredients").value = "";
-      document.getElementById("recipeInstructions").value = "";
-    });
-  </script>
 </body>
 </html>
